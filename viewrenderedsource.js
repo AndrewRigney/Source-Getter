@@ -322,6 +322,7 @@
 
   function intoTableRows(str, type) {
     //two blank rows - a crude spacing hack for aesthetics
+    var lineNumber = 1;
     var rows =
       '<tr><td class="line-html"></td></tr><tr><td class="line-html"></td></tr>';
     var openInsTag = false;
@@ -376,7 +377,7 @@
       } else {
         //raw and rendered need html entities added. Not confident line below covers all cases
         rows +=
-          '<tr><td class="line-html">' +
+          '<tr><td class="line-html"><span style="color:rgba(255, 255, 255, 0.25);">' + lineNumber + '</span> ' +
           line
             .replace(/&/g, "&amp;")
             .replace(/</g, "&lt;")
@@ -384,6 +385,7 @@
             .replace(/"/g, "&quot;") +
           "\n</td></tr>";
       }
+      lineNumber++;
     });
 
     return rows;
@@ -470,6 +472,10 @@
         } else if (type === "rendered") {
           responseRendered = response;
           renderedDisplay.innerHTML = intoTableRows(response, "rendered");
+
+          /* document.querySelectorAll('td.language-html').forEach(block => {
+            hljs.highlightBlock(block);
+          }); */
         }
 
         checkIfBothVersions();
