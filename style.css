@@ -80,7 +80,7 @@ video {
 
 body {
   line-height: 1;
-  background-color: #222;
+  background-color: #1e1e1e;
   color: #ddd;
 }
 
@@ -140,9 +140,13 @@ td.line-html-diff {
   padding: 5px 0 5px 0;
 }
 
-td:hover {
-  background-color:blue;
-  color: white;
+tr {
+	border: 1px solid transparent;
+}
+
+tr:hover td {
+  background-color:#094771;
+  border: 1px solid #007fd4;
 }
 
 ins {
