@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Source Getter</title>
+	<link rel="stylesheet" href="style.min.css" />
+</head>
+
+<body>
+	<div id="top">
+		<a id="current-url-href" href="#" target="_blank"><img src="external-link.png"
+				style="vertical-align: top" /></a>
+		<div id="current-url">-</div>
+		<div id="active-tables">
+			Show/hide: <label><input type="checkbox" class="table-visible-checkbox" checked>Server</label>
+			<label><input type="checkbox" class="table-visible-checkbox" checked>Rendered</label>
+			<label><input type="checkbox" class="table-visible-checkbox" checked>Diff</label>
+		</div>
+		<div id="bugs-comments">
+		</div>
+	</div>
+	<div class="table-wrapper">
+		<table>
+			<thead>
+				<tr>
+					<th class="table-head">
+						Server
+						<div class="tooltip">i
+							<span class="tooltiptext">The source code sent from the server to the browser
+								<em>before</em> the DOM is constructed. The same as you'll see with traditional 'View
+								Source' in the browser (after minor formatting tweaks)</span>
+						</div>
+						<button class="copy-btn">Copy</button>
+						<div class="column-info">
+							Fetched as: <span id="fetch-type-raw">loading...</span>
+							<button id="fetch-as-btn">Fetch</button>
+							<label class="label-fetch-as"><input type="checkbox" id="as-google-checkbox">As
+								Googlebot</label>
+							<label class="label-fetch-as"><input type="checkbox" id="as-mobile-checkbox">As
+								mobile</label>
+						</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody id="raw-display">
+			</tbody>
+			<tfoot>
+				<tr>
+					<td>
+						<div id="raw-status"></div>
+					</td>
+			</tfoot>
+		</table>
+	</div>
+	<div class="table-wrapper">
+		<table>
+			<thead>
+				<tr>
+					<th class="table-head">
+						Rendered
+						<div class="tooltip">i
+							<span class="tooltiptext">The rendered page after the source has been processed into a DOM,
+								including any modifications made by Javascript</span>
+						</div>
+						<button class="copy-btn">Copy</button>
+						<div class="column-info">
+							Rendered as: <span id="fetch-type-rendered">loading...</span>
+						</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody id="rendered-display">
+			</tbody>
+			<tfoot>
+				<tr>
+					<td>
+						<div id="rendered-status"></div>
+					</td>
+			</tfoot>
+		</table>
+	</div>
+	<div class="table-wrapper">
+		<table>
+			<thead>
+				<tr>
+					<th class="table-head">
+						Difference
+						<div class="tooltip">i
+							<span class="tooltiptext">The difference between the rendered source and the raw source.
+								Differences typically occur when JavaScript has modified the DOM after the initial load.
+							</span>
+						</div>
+						(<span id="diff-count-current">0</span> of <span id="diff-count-total">0</span>)
+						<button class="copy-btn">Copy</button>
+						<div class="column-info">
+							<span style="color: #b30000; background: #fadad7;">Red = line removed</span>
+							<span style="background: #eaf2c2; color: #406619;">Green = line added</span>
+						</div>
+					</th>
+				</tr>
+			</thead>
+			<tbody id="diff-display">
+			</tbody>
+			<tfoot>
+				<tr>
+					<td>
+						<div id="diff-status"></div>
+					</td>
+			</tfoot>
+		</table>
+	</div>
+	<div id="bottom-scroll-filler">
+		<span id="no-panels-selected"></span>
+	</div>
+
+	<div id="back-to-top">
+		<img src="back-to-top.png" />
+		TOP
+	</div>
+	<script src="beautify-html.min.js"></script>
+	<script src="viewrenderedsource.min.js"></script>
+</body>
+
+</html>
