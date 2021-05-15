@@ -95,7 +95,7 @@
 
     //get URL of tab that opened us so we can fetch raw source
     rawURL = tab.url;
-    d.title = "View Rendered Source: " + rawURL.substring(0, 150);
+    d.title = "Source Getter : " + rawURL.substring(0, 150);
     currentURL.innerHTML = "URL: " + rawURL;
     currentURLHref.href = rawURL;
 
@@ -523,7 +523,7 @@
         createXHRRetry();
       } else if (type === "rendered") {
         renderedStatus.innerHTML =
-          '<span class="error">Error getting rendered source. Return to site and re-launch View Rendered Source again</span>';
+          '<span class="error">Error getting rendered source. Return to site and re-launch Source Getter again</span>';
         diffStatus.innerHTML = "";
       }
     };

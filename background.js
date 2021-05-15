@@ -35,7 +35,7 @@ chrome.browserAction.onClicked.addListener(function (tab) {
 
 //right click context menu
 chrome.contextMenus.create({
-	title: "View Rendered Source (Ctrl+Shift+U)", 
+	title: "Source Getter (Ctrl+Shift+U)", 
 	contexts:["page"], 
 	onclick: launch
 });
