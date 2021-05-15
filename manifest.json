@@ -29,7 +29,7 @@
 	{
 		"run_at": "document_start",
 		"matches": ["<all_urls>"],
-		"js": ["scripts/content.js"]
+		"js": ["scripts/content.min.js"]
 	}],
 	"permissions": [
 		"http://*/*",
