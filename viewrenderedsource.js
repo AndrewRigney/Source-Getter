@@ -377,7 +377,7 @@
       } else {
         //raw and rendered need html entities added. Not confident line below covers all cases
         rows +=
-          '<tr><td class="line-html"><span style="color:rgba(255, 255, 255, 0.25);">' + lineNumber + '</span> ' +
+          '<tr><td class="line-html"><span style="color:rgba(255, 255, 255, 0.25); padding-left: 0.25em;">' + lineNumber + '</span> ' +
           line
             .replace(/&/g, "&amp;")
             .replace(/</g, "&lt;")
