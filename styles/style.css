@@ -370,3 +370,38 @@ thead th {
   visibility: visible;
   opacity: 1;
 }
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #ddd;
+    color: #1e1e1e;
+  }
+
+  table {
+    background: linear-gradient(
+      90deg,
+      rgba(240, 240, 240, 1) 0%,
+      rgba(246, 246, 246, 1) 100%
+    );
+  }
+
+  td span {
+    color: #888 !important;
+  }
+
+  tr:hover td {
+    color: white !important;
+  }
+
+  button {
+    background: #555;
+    border: 1px solid #555;
+    color: white;
+  }
+
+  button:hover {
+    background: white;
+    border: 1px solid #555;
+    color: #555;
+  }
+}
