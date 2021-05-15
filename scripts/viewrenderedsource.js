@@ -218,14 +218,14 @@
   });
 
   /*
-	theme.addEventListener('change', function() {
-		if(this.checked) {
-			highlightStyle.setAttribute('href', 'dark.css');
-		} else {
-			highlightStyle.setAttribute('href', 'light.css');
-		}
-	});
-	*/
+  theme.addEventListener('change', function() {
+    if(this.checked) {
+      highlightStyle.setAttribute('href', 'dark.css');
+    } else {
+      highlightStyle.setAttribute('href', 'light.css');
+    }
+  });
+  */
 
   function copyText(el, buttonClicked) {
     var range = d.createRange();
@@ -568,12 +568,12 @@
       diffDisplay.innerHTML = intoTableRows(diffHTML, "diff");
 
       /*
-			//raw and rendered now ready for syntax highlighting
-			var highlight = d.querySelectorAll('.line-html'); //only highlight raw and rendered, not diff due to performance issues when scrolling
-			highlight.forEach(function(line) {
-				hljs.highlightBlock(line);
-			});
-		*/
+      //raw and rendered now ready for syntax highlighting
+      var highlight = d.querySelectorAll('.line-html'); //only highlight raw and rendered, not diff due to performance issues when scrolling
+      highlight.forEach(function(line) {
+        hljs.highlightBlock(line);
+      });
+    */
 
       //count and differences, display count, and get their position from top
       allDiffItems = d.querySelectorAll("ins, del");
