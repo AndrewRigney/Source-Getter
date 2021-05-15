@@ -18,7 +18,7 @@ function launch() {
 					chrome.storage.local.set({ [doctypeKey]: response.doctype });
 					chrome.storage.local.set({ [UAKey]: response.userAgent });
 
-					chrome.tabs.create({ url: 'viewrenderedsource.html?tabID=' + tabID, index: tabPosition + 1});
+					chrome.tabs.create({ url: 'sourcegetter.html?tabID=' + tabID, index: tabPosition + 1});
 			} else {
 				//no response from content.js -- not much we can do...
 			}

@@ -58,7 +58,7 @@
   var allDiffItems,
     allDiffItemsPos = [];
 
-  var diffWorker = new Worker("diffWorker.js");
+  var diffWorker = new Worker("scripts/diffWorker.js");
 
   //var highlightStyle = d.getElementById('highlight-style')
   //var theme = d.getElementById('theme');
@@ -392,7 +392,7 @@
   }
 
   function fetchSource(url, type) {
-    var loadingMessage = '<img src="loading.gif" />';
+    var loadingMessage = '<img src="artwork/loading.gif" />';
 
     //cache buster
     if (type === "raw") {
